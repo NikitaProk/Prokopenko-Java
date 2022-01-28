@@ -1,6 +1,7 @@
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+package mainPac.method3;
+
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Task3 {
 
@@ -27,15 +28,17 @@ public class Task3 {
         return inputsArr;
     }
 
-    public static Integer[] dividedNumbers(int[] inputsArr) {
+    public static List<Integer> dividedNumbers(int[] inputsArr) {
 
-        ArrayList<Integer> arr = new ArrayList<>();
-        for (int j : inputsArr) {
-            if (j % 3 == 0) {
-                arr.add(j);
-            }
+        List<Integer> arr = new LinkedList<>();
+        for (Integer ar: inputsArr) {
+            arr.add(ar);
         }
-        Integer[] arr1 = arr.toArray(new Integer[0]);
-        return arr1;
+
+        return arr.stream()
+                .filter(a -> a % 3 == 0)
+                .collect(Collectors.toList());
+        //Integer[] arr1 = arr.toArray(new Integer[0]);
     }
+
 }

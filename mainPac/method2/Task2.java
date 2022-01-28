@@ -1,10 +1,12 @@
+package mainPac.method2;
+
 import java.util.Scanner;
 
 public class Task2 {
-    private final static String firstName = "Вячеслав";
+    private final static String FIRSTNAME = "Вячеслав";
 
     public String getFirstName() {
-        return firstName;
+        return FIRSTNAME;
     }
 
     public static String isCorrect() {
@@ -14,6 +16,6 @@ public class Task2 {
         String name = sc.next();
         String newName = name.replaceFirst("[а-я]", name.substring(0,1).toUpperCase());
 
-        return (newName.equals(firstName) || name.equals(firstName)) ? "Привет, " + firstName : "Нет такого имени";
+        return (newName.equals(FIRSTNAME) || name.equals(FIRSTNAME)) ? "Привет, " + FIRSTNAME : "Нет такого имени";
     }
 }

@@ -1,4 +1,8 @@
-import java.util.Arrays;
+package mainPac;
+
+import mainPac.method2.Task2;
+import mainPac.method3.Task3;
+import mainPac.method1.Task1;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,6 +13,6 @@ public class Main {
         System.out.println(Task2.isCorrect());
 
         //Вывод третьего задания
-        System.out.println(Arrays.toString(Task3.dividedNumbers(Task3.newArr())));
+        System.out.println(Task3.dividedNumbers(Task3.newArr()));
     }
 }
